@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: monospace, arial;
 }
 
 html {
@@ -43,14 +44,15 @@ footer {
   padding: 8px;
 }
 
-.qcard-bookmark {
+.qcard svg {
   position: absolute;
-  right: 0px;
-  top: 0px;
-  scale: 0.5;
+  right: 10px;
+  top: -1px;
+  font-size: 3em;
 }
 
-.qcard + p {
+.qcard p {
+  color: #d9dad7;
 }
 
 .qcard-answerbutton {
@@ -65,4 +67,19 @@ footer {
 
 .qcard li {
   display: inline;
+  border: dotted 2px #3e4a61;
+  padding: 3px;
+  margin-right: 5px;
+}
+
+.navmenu {
+  list-style-type: none;
+}
+
+.navmenu li {
+  display: inline;
+}
+
+a > svg {
+  font-size: 60px;
 }
