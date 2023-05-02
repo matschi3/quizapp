@@ -17,10 +17,12 @@ header {
 }
 
 footer {
-  display: fixed;
+  position: fixed;
   bottom: 0px;
   left: 0px;
-  right: 0px;
+  width: 100%;
+  background-color: #1a2639;
+  border: solid 1px #c24d2c;
 }
 
 .qcard_container {
