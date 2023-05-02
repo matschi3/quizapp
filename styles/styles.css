@@ -10,8 +10,17 @@ header {
   background-color: #1a2639;
   color: #c24d2c;
   position: static;
-  margin: -8px;
-  border: dotted 1px;
+  margin-top: -20px;
+  border: solid 1px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px #c24d2c;
+}
+
+footer {
+  display: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 }
 
 .qcard_container {
