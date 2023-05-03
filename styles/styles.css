@@ -1,20 +1,27 @@
+:root {
+  --primecolor-white: #d9dad7;
+  --primecolor-light: #3e4a61;
+  --primecolor-dark: #1a2639;
+  --primecolor-orange: #c24d2c;
+}
+
 * {
   box-sizing: border-box;
   font-family: monospace, arial;
 }
 
 html {
-  background-color: #3e4a61;
+  background-color: var(--primecolor-light);
 }
 
 header {
-  background-color: #1a2639;
-  color: #c24d2c;
+  background-color: var(--primecolor-dark);
+  color: var(--primecolor-orange);
   position: static;
   margin-top: -20px;
   border: solid 1px;
   border-radius: 15px;
-  box-shadow: 3px 3px 3px #c24d2c;
+  box-shadow: 3px 3px 3px var(--primecolor-orange);
 }
 
 footer {
@@ -22,8 +29,8 @@ footer {
   bottom: 0px;
   left: 0px;
   width: 100%;
-  background-color: #1a2639;
-  border: solid 1px #c24d2c;
+  background-color: var(--primecolor-dark);
+  border: solid 1px var(--primecolor-orange);
 }
 
 .qcard_container {
@@ -34,40 +41,40 @@ footer {
 
 .qcard {
   width: 85vw;
-  border: solid 1px #c24d2c;
+  border: solid 1px var(--primecolor-orange);
   border-radius: 15px;
-  box-shadow: 3px 3px 3px #c24d2c;
+  box-shadow: 3px 3px 3px var(--primecolor-orange);
   position: relative;
   margin: 15px;
-  background-color: #1a2639;
-  color: #d9dad7;
+  background-color: var(--primecolor-dark);
+  color: var(--primecolor-white);
   padding: 8px;
 }
 
-.qcard svg {
+.qcard__bookmark {
   position: absolute;
   right: 10px;
-  top: -1px;
-  font-size: 3em;
+  top: -5px;
+  font-size: 2em;
 }
 
-.qcard p {
-  color: #d9dad7;
+.qcard__question {
+  color: var(--primecolor-white);
 }
 
-.qcard-answerbutton {
+.qcard__buttonAnswer {
 }
 
-.qcard-answer {
+.qcard__answer {
 }
 
-.qcard-taglist {
+.qcard__taglist {
   list-style-type: none;
 }
 
-.qcard li {
+.qcard__taglist li {
   display: inline;
-  border: dotted 2px #3e4a61;
+  border: dotted 2px var(--primecolor-light);
   padding: 3px;
   margin-right: 5px;
 }
