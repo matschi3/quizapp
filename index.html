@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QUIZZER - Cool Quiz</title>
     <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="./scripts/script.js" defer></script>
   </head>
   <body>
     <header>
@@ -31,12 +32,16 @@
               d="M32 35.999c1.023 0 2.047.391 2.828 1.172L48 50.343V7.999H16v42.344l13.172-13.172A3.988 3.988 0 0 1 32 35.999z"
             />
           </svg>
-          <p class="qcard__question">
+          <p class="qcard__question" data-js="qcard__question">
             What property flips the axes in flexbox?
           </p>
           <!-- Frage 1 -->
-          <p class="qcard__answer" hidden>Answer: flex-direction</p>
-          <button class="qcard__buttonAnswer">Show Answer</button>
+          <p class="qcard__answer qcard__hideMe" data-js="qcard__answer">
+            Answer: flex-direction
+          </p>
+          <button class="qcard__buttonAnswer" data-js="qcard__buttonAnswer">
+            Show Answer
+          </button>
           <ul class="qcard__taglist" role="list">
             <li><span>#html</span></li>
             <li><span>#flexbox</span></li>
@@ -61,12 +66,16 @@
               d="M32 35.999c1.023 0 2.047.391 2.828 1.172L48 50.343V7.999H16v42.344l13.172-13.172A3.988 3.988 0 0 1 32 35.999z"
             />
           </svg>
-          <p class="qcard__question">
+          <p class="qcard__question" data-js="qcard__question">
             What property flips the axes in flexbox?
           </p>
           <!-- Frage 2 -->
-          <p class="qcard__answer" hidden>Answer: flex-direction</p>
-          <button class="qcard__buttonAnswer">Show Answer</button>
+          <p class="qcard__answer qcard__hideMe" data-js="qcard__answer">
+            Answer: flex-direction
+          </p>
+          <button class="qcard__buttonAnswer" data-js="qcard__buttonAnswer">
+            Show Answer
+          </button>
           <ul class="qcard__taglist" role="list">
             <li><span>#html</span></li>
             <li><span>#flexbox</span></li>
@@ -91,12 +100,16 @@
               d="M32 35.999c1.023 0 2.047.391 2.828 1.172L48 50.343V7.999H16v42.344l13.172-13.172A3.988 3.988 0 0 1 32 35.999z"
             />
           </svg>
-          <p class="qcard__question">
+          <p class="qcard__question" data-js="qcard__question">
             What property flips the axes in flexbox?
           </p>
           <!-- Frage 3 -->
-          <p class="qcard__answer" hidden>Answer: flex-direction</p>
-          <button class="qcard__buttonAnswer">Show Answer</button>
+          <p class="qcard__answer qcard__hideMe" data-js="qcard__answer">
+            Answer: flex-direction
+          </p>
+          <button class="qcard__buttonAnswer" data-js="qcard__buttonAnswer">
+            Show Answer
+          </button>
           <ul class="qcard__taglist" role="list">
             <li><span>#html</span></li>
             <li><span>#flexbox</span></li>
@@ -121,12 +134,16 @@
               d="M32 35.999c1.023 0 2.047.391 2.828 1.172L48 50.343V7.999H16v42.344l13.172-13.172A3.988 3.988 0 0 1 32 35.999z"
             />
           </svg>
-          <p class="qcard__question">
+          <p class="qcard__question" data-js="qcard__question">
             What property flips the axes in flexbox?
           </p>
           <!-- Frage 4 -->
-          <p class="qcard__answer" hidden>Answer: flex-direction</p>
-          <button class="qcard__buttonAnswer">Show Answer</button>
+          <p class="qcard__answer qcard__hideMe" data-js="qcard__answer">
+            Answer: flex-direction
+          </p>
+          <button class="qcard__buttonAnswer" data-js="qcard__buttonAnswer">
+            Show Answer
+          </button>
           <ul class="qcard__taglist" role="list">
             <li><span>#html</span></li>
             <li><span>#flexbox</span></li>
@@ -151,12 +168,16 @@
               d="M32 35.999c1.023 0 2.047.391 2.828 1.172L48 50.343V7.999H16v42.344l13.172-13.172A3.988 3.988 0 0 1 32 35.999z"
             />
           </svg>
-          <p class="qcard__question">
+          <p class="qcard__question" data-js="qcard__question">
             What property flips the axes in flexbox?
           </p>
           <!-- Frage 5 -->
-          <p class="qcard__answer" hidden>Answer: flex-direction</p>
-          <button class="qcard__buttonAnswer">Show Answer</button>
+          <p class="qcard__answer qcard__hideMe" data-js="qcard__answer">
+            Answer: flex-direction
+          </p>
+          <button class="qcard__buttonAnswer" data-js="qcard__buttonAnswer">
+            Show Answer
+          </button>
           <ul class="qcard__taglist" role="list">
             <li><span>#html</span></li>
             <li><span>#flexbox</span></li>
@@ -191,8 +212,8 @@
             </a>
           </li>
           <li>
-            <a href="#">
-              <!-- to bookmarks -->
+            <a href="./bookmark.html">
+              <!-- to bookmark -->
               <svg
                 xml:space="preserve"
                 version="1.0"
@@ -212,7 +233,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="./profile.html">
               <!-- to profile -->
               <svg
                 xml:space="preserve"

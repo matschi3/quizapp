@@ -62,10 +62,16 @@ footer {
   color: var(--primecolor-white);
 }
 
-.qcard__buttonAnswer {
+.qcard__answer {
+  color: var(--primecolor-orange);
 }
 
-.qcard__answer {
+.qcard__buttonAnswer {
+  background-color: var(--primecolor-light);
+}
+
+.qcard__hideMe {
+  display: none;
 }
 
 .qcard__taglist {

@@ -1,0 +1,1 @@
+const qcard-question = document.querySelector('[data-js="qcard__question"]');
