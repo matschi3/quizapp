@@ -17,3 +17,12 @@ bookmark.addEventListener("click", () => {
   bookmark.classList.toggle("qcard__bookmarked"); //toggle bookmark-color
   bookmark.classList.toggle("qcard__bookmark");
 });
+
+// new
+// new try - all cards
+/* const qcards = document.querySelectorAll('[data-js="qcard"]');  //get full qcard
+
+qcards.forEach((qcard) => {
+    const answerButton = qcard.querySelector('[data-js=""]');
+    answerButton.classList.
+}); */
