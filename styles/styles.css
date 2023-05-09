@@ -37,7 +37,7 @@ footer {
 .navmenu {
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: baseline;
   margin: 10px;
 }
