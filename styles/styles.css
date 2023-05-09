@@ -32,6 +32,19 @@ footer {
   background-color: var(--primecolor-dark);
   border: solid 1px var(--primecolor-orange);
 }
+/* Navigation */
+
+.navmenu {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 10px;
+}
+
+.navitem {
+  font-size: 50px;
+}
 
 /* question Card */
 
@@ -95,23 +108,3 @@ footer {
   padding: 3px;
   margin-right: 5px;
 }
-
-/* Navigation */
-
-.navmenu {
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.navitem {
-  font-size: 50px;
-}
-
-/* .navmenu li {
-  display: inline;
-}
-
-a > svg {
-  font-size: 60px;
-} */
