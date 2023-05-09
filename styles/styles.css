@@ -24,6 +24,10 @@ header {
   box-shadow: 3px 3px 3px var(--primecolor-orange);
 }
 
+header h1 {
+  margin: 10px;
+}
+
 footer {
   position: fixed;
   bottom: 0px;
@@ -55,6 +59,10 @@ footer {
 }
 
 .qcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-between;
   width: 85vw;
   border: solid 1px var(--primecolor-orange);
   border-radius: 15px;
@@ -92,6 +100,7 @@ footer {
 
 .qcard__buttonAnswer {
   background-color: var(--primecolor-light);
+  max-width: 200px;
 }
 
 .qcard__hideMe {
@@ -99,12 +108,16 @@ footer {
 }
 
 .qcard__taglist {
-  list-style-type: none;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
-.qcard__taglist li {
-  display: inline;
+.qcard__taglist__tag {
   border: dotted 2px var(--primecolor-light);
-  padding: 3px;
-  margin-right: 5px;
+  margin: 1px;
 }
