@@ -44,12 +44,12 @@
   color: var(--primecolor-orange);
 }
 
-.qcard__buttonAnswer {
+.qcard__answerButton {
   background-color: var(--primecolor-light);
   max-width: 200px;
 }
 
-.qcard__hideMe {
+.qcard__answerButton--hidden {
   display: none;
 }
 
