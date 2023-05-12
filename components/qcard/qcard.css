@@ -1,0 +1,69 @@
+.qcard_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-between;
+  width: 85vw;
+  border: solid 1px var(--primecolor-orange);
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px var(--primecolor-orange);
+  position: relative;
+  margin: 15px;
+  background-color: var(--primecolor-dark);
+  color: var(--primecolor-white);
+  padding: 8px;
+}
+
+.qcard__bookmark {
+  position: absolute;
+  right: 10px;
+  top: -5px;
+  font-size: 2em;
+  filter: grayscale(70%);
+}
+
+.qcard__bookmarked {
+  position: absolute;
+  right: 10px;
+  top: -5px;
+  font-size: 2em;
+  filter: greyscale(1%);
+}
+
+.qcard__question {
+  color: var(--primecolor-white);
+}
+
+.qcard__answer {
+  color: var(--primecolor-orange);
+}
+
+.qcard__buttonAnswer {
+  background-color: var(--primecolor-light);
+  max-width: 200px;
+}
+
+.qcard__hideMe {
+  display: none;
+}
+
+.qcard__taglist {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.qcard__taglist__tag {
+  border: dotted 2px var(--primecolor-light);
+  margin: 1px;
+}

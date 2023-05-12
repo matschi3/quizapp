@@ -1,0 +1,13 @@
+header {
+  background-color: var(--primecolor-dark);
+  color: var(--primecolor-orange);
+  position: static;
+  margin-top: -20px;
+  border: solid 1px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px var(--primecolor-orange);
+}
+
+header h1 {
+  margin: 10px;
+}

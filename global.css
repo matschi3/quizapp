@@ -1,0 +1,24 @@
+:root {
+  --primecolor-white: #d9dad7;
+  --primecolor-light: #3e4a61;
+  --primecolor-dark: #1a2639;
+  --primecolor-orange: #c24d2c;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: monospace, arial;
+}
+
+html {
+  background-color: var(--primecolor-light);
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: var(--primecolor-dark);
+  border: solid 1px var(--primecolor-orange);
+}
