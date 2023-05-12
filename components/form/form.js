@@ -20,7 +20,7 @@ form.addEventListener("submit", (event) => {
   newSection.classList.add("qcard");
   newBookmarkSvg.classList.add("qcard__bookmark");
   newQuestion.classList.add("qcard__question");
-  newAnswer.classList.add("qcard__answer");
+  newAnswer.classList.add("qcard__answer", "qcard__answerButton--hidden");
   newAnswerButton.classList.add("qcard__answerButton");
   newUlist.classList.add("qcard__taglist");
   newListitem.classList.add("qcard__taglist__tag");
@@ -28,4 +28,14 @@ form.addEventListener("submit", (event) => {
   newQuestion.textContent = data.formQuestion;
   newAnswer.textContent = data.formAnswer;
   newAnswerButton.textContent = `Show Answer`;
+  newListitem.textContent = data.formTag;
+
+  document.body.append(newSection);
+  newSection.append(newBookmarkSvg);
+  // svg path's maybe noch hierhin ?
+  newSection.append(newQuestion);
+  newSection.append(newAnswer);
+  newSection.append(newAnswerButton);
+  newSection.append(newUlist);
+  newUlist.append(newListitem);
 });
