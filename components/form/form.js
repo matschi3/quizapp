@@ -20,8 +20,11 @@ form.addEventListener("submit", (event) => {
   newSection.classList.add("qcard");
   // newBookmarkSvg.classList.add("qcard__bookmark");
   newQuestion.classList.add("qcard__question");
+  newQuestion.dataset.js = "qcard__question";
   newAnswer.classList.add("qcard__answer", "qcard__answerButton--hidden");
+  newAnswer.dataset.js = "qcard__answer";
   newAnswerButton.classList.add("qcard__answerButton");
+  newAnswerButton.dataset.js = "qcard__answerButton";
   newUlist.classList.add("qcard__taglist");
   newListitem.classList.add("qcard__taglist__tag");
 
@@ -57,4 +60,23 @@ form.addEventListener("submit", (event) => {
   newSection.append(newAnswerButton);
   newSection.append(newUlist);
   newUlist.append(newListitem);
+
+  // aus index.js
+  // ANSWER BUTTON
+  const question = document.querySelector('[data-js="qcard__question"]'); //get question
+  const answer = document.querySelector('[data-js="qcard__answer"]'); //get answer
+  const button = document.querySelector('[data-js="qcard__answerButton"]'); //get button
+
+  button.addEventListener("click", () => {
+    question.classList.toggle("qcard__answerButton--hidden"); //toggle hideMe question
+    answer.classList.toggle("qcard__answerButton--hidden"); //toggle hideMe answer
+  });
+  // aus index.js
+  // BOOKMARK
+  const bookmark = document.querySelector('[data-js="qcard__bookmark"]'); //get bokmark button
+
+  bookmark.addEventListener("click", () => {
+    bookmark.classList.toggle("qcard__bookmarked"); //toggle bookmark-color
+    bookmark.classList.toggle("qcard__bookmark");
+  });
 });
