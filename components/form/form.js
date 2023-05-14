@@ -17,21 +17,24 @@ form.addEventListener("submit", (event) => {
   const newUlist = document.createElement("ul");
   const newListitem = document.createElement("li");
 
-  newSection.classList.add("qcard");
-  // newBookmarkSvg.classList.add("qcard__bookmark");
-  newQuestion.classList.add("qcard__question");
-  newQuestion.dataset.js = "qcard__question";
-  newAnswer.classList.add("qcard__answer", "qcard__answerButton--hidden");
-  newAnswer.dataset.js = "qcard__answer";
-  newAnswerButton.classList.add("qcard__answerButton");
-  newAnswerButton.dataset.js = "qcard__answerButton";
-  newUlist.classList.add("qcard__taglist");
-  newListitem.classList.add("qcard__taglist__tag");
+  newSection.classList.add("quiz-card");
+  // newBookmarkSvg.classList.add("quiz-card__bookmark");
+  newQuestion.classList.add("quiz-card__question");
+  newQuestion.dataset.js = "quiz-card__question";
+  newAnswer.classList.add(
+    "quiz-card__answer",
+    "quiz-card__answerButton--hidden"
+  );
+  newAnswer.dataset.js = "quiz-card__answer";
+  newAnswerButton.classList.add("quiz-card__answerButton");
+  newAnswerButton.dataset.js = "quiz-card__answerButton";
+  newUlist.classList.add("quiz-card__taglist");
+  newListitem.classList.add("quiz-card__taglist__tag");
 
   newSection.innerHTML = `
     <svg
-      data-js="qcard__bookmark"
-      class="qcard__bookmark"
+      data-js="quiz-card__bookmark"
+      class="quiz-card__bookmark"
       xml:space="preserve"
       version="1.0"
       viewBox="0 0 64 64"
@@ -63,20 +66,20 @@ form.addEventListener("submit", (event) => {
 
   // aus index.js
   // ANSWER BUTTON
-  const question = document.querySelector('[data-js="qcard__question"]'); //get question
-  const answer = document.querySelector('[data-js="qcard__answer"]'); //get answer
-  const button = document.querySelector('[data-js="qcard__answerButton"]'); //get button
+  const question = document.querySelector('[data-js="quiz-card__question"]'); //get question
+  const answer = document.querySelector('[data-js="quiz-card__answer"]'); //get answer
+  const button = document.querySelector('[data-js="quiz-card__answerButton"]'); //get button
 
   button.addEventListener("click", () => {
-    question.classList.toggle("qcard__answerButton--hidden"); //toggle hideMe question
-    answer.classList.toggle("qcard__answerButton--hidden"); //toggle hideMe answer
+    question.classList.toggle("quiz-card__answerButton--hidden"); //toggle hideMe question
+    answer.classList.toggle("quiz-card__answerButton--hidden"); //toggle hideMe answer
   });
   // aus index.js
   // BOOKMARK
-  const bookmark = document.querySelector('[data-js="qcard__bookmark"]'); //get bokmark button
+  const bookmark = document.querySelector('[data-js="quiz-card__bookmark"]'); //get bokmark button
 
   bookmark.addEventListener("click", () => {
-    bookmark.classList.toggle("qcard__bookmarked"); //toggle bookmark-color
-    bookmark.classList.toggle("qcard__bookmark");
+    bookmark.classList.toggle("quiz-card__bookmarked"); //toggle bookmark-color
+    bookmark.classList.toggle("quiz-card__bookmark");
   });
 });
