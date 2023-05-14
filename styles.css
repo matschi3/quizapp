@@ -1,6 +1,6 @@
 @import "./global.css";
 
 @import "./components/header/header.css";
-@import "./components/qcard/qcard.css";
+@import "./components/quiz-card/quiz-card.css";
 @import "./components/navigation/navigation.css";
 @import "./components/form/form.css";
