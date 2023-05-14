@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QUIZZER - Cool Quiz</title>
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./index.js" defer></script>
+    <script src="./components/form/form.js" defer></script>
   </head>
   <body>
     <header>
       <h1>QUIZZER</h1>
     </header>
     <main>
-      <form aria-labelledby="form-legend">
+      <form aria-labelledby="form-legend" data-js="form-newcard">
         <fieldset aria-labelledby="form-legend" class="form-container">
           <legend id="formLegend">Add a new unique Question here:</legend>
 
           <label for="form-question">Your question</label>
           <textarea
             id="form-question"
-            name="form-question"
+            name="formQuestion"
             rows="6"
             required
           ></textarea>
@@ -28,13 +28,13 @@
           <label for="form-answer">Your answer</label>
           <textarea
             id="form-answer"
-            name="form-answer"
+            name="formAnswer"
             rows="6"
             required
           ></textarea>
 
           <label for="form-tag">Tag (only one for now PLEASE ✌🏼)</label>
-          <input type="text" id="form-tag" name="form-tag" required />
+          <input type="text" id="form-tag" name="formTag" required />
 
           <button type="submit">Submit</button>
         </fieldset>
