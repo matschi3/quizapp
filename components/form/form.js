@@ -3,12 +3,6 @@ const form = document.querySelector('[data-js="form-newcard"]');
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const formData = new FormData(event.target);
-  const data = Object.fromEntries(formData);
-  // const formQuestion = event.target.elements.formQuestion.value;
-  // const formAnswer = event.target.elements.formAnswer.value;
-  // const formTag = event.target.elements.formTag.value;
-
   const newSection = document.createElement("section");
   const newBookmarkSvg = document.createElement("svg");
   const newQuestion = document.createElement("p");
@@ -18,6 +12,7 @@ form.addEventListener("submit", (event) => {
   const newListitem = document.createElement("li");
 
   newSection.classList.add("quiz-card");
+  // ersetzt durch 'svg' im innerHTML
   // newBookmarkSvg.classList.add("quiz-card__bookmark");
   newQuestion.classList.add("quiz-card__question");
   newQuestion.dataset.js = "quiz-card__question";
@@ -30,7 +25,6 @@ form.addEventListener("submit", (event) => {
   newAnswerButton.dataset.js = "quiz-card__answerButton";
   newUlist.classList.add("quiz-card__taglist");
   newListitem.classList.add("quiz-card__taglist__tag");
-
   newSection.innerHTML = `
     <svg
       data-js="quiz-card__bookmark"
@@ -51,10 +45,17 @@ form.addEventListener("submit", (event) => {
       />
     </svg>
   `;
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData);
+
   newQuestion.textContent = data.formQuestion;
   newAnswer.textContent = data.formAnswer;
   newAnswerButton.textContent = `Show Answer`;
   newListitem.textContent = data.formTag;
+  // newQuestion.textContent = event.target.elements.formQuestion.value;
+  // newAnswer.textContent = event.target.elements.formAnswer.value;
+  // newAnswerButton.textContent = `Show Answer`;
+  // newListitem.textContent = event.target.elements.formTag.value;
 
   document.body.append(newSection);
   newSection.append(newBookmarkSvg);
@@ -82,4 +83,42 @@ form.addEventListener("submit", (event) => {
     bookmark.classList.toggle("quiz-card__bookmarked"); //toggle bookmark-color
     bookmark.classList.toggle("quiz-card__bookmark");
   });
+});
+
+// FormTextFieldCounter
+form.addEventListener("input", (event) => {
+  /* const characterCounters = document.querySelectorAll(
+    '[data-js="formQuestionCounter"]'
+  );
+  characterCounters.forEach((counter) => {
+    
+    });
+  }); */
+  const formQuestion = document.querySelector('[data-js="formQuestion"]');
+  const maxLengthQuestion = formQuestion.getAttribute("maxlength");
+  const formTextAreaCounterQ = document.querySelector(
+    "[data-js=formTextareaCounterQ]"
+  );
+
+  const updateFormTextAreaCounterQ = (value) => {
+    formTextAreaCounterQ.innerText = value;
+  };
+
+  updateFormTextAreaCounterQ(maxLengthQuestion);
+
+  updateFormTextAreaCounterQ(maxLengthQuestion - formQuestion.value.length);
+
+  // Answer
+  const formAnswer = document.querySelector('[data-js="formAnswer"]');
+  const maxLengthAnswer = formAnswer.getAttribute("maxlength");
+  const formTextAreaCounterA = document.querySelector(
+    "[data-js=formTextareaCounterA]"
+  );
+
+  const updateFormTextAreaCounterA = (value) => {
+    formTextAreaCounterA.innerText = value;
+  };
+
+  updateFormTextAreaCounterA(maxLengthAnswer);
+  updateFormTextAreaCounterA(maxLengthAnswer - formAnswer.value.length);
 });
