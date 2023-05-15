@@ -1,5 +1,9 @@
-.form-container {
+.form__fieldset {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.form__fieldset__counter {
+  margin-top: 0px;
 }
