@@ -86,10 +86,6 @@ form.addEventListener("submit", (event) => {
 });
 
 // FormTextFieldCounter
-
-/* const formQuestion = document.querySelector('[data-js="formQuestion]'); */
-/* const formAnswerCounter = document.querySelector("[data-js=formAnswerCounter]"); */
-
 form.addEventListener("input", (event) => {
   /* const characterCounters = document.querySelectorAll(
     '[data-js="formQuestionCounter"]'
@@ -99,19 +95,30 @@ form.addEventListener("input", (event) => {
     });
   }); */
   const formQuestion = document.querySelector('[data-js="formQuestion"]');
-  const maxLength = formQuestion.getAttribute("maxlength");
-  const formTextAreaCounter = document.querySelector(
-    "[data-js=formTextareaCounter]"
+  const maxLengthQuestion = formQuestion.getAttribute("maxlength");
+  const formTextAreaCounterQ = document.querySelector(
+    "[data-js=formTextareaCounterQ]"
   );
-  /* console.log(formQuestion);
-  console.log(maxLength);
-  console.log(formTextAreaCounter); */
 
-  const updateFormTextAreaCounter = (value) => {
-    formTextAreaCounter.innerText = value;
+  const updateFormTextAreaCounterQ = (value) => {
+    formTextAreaCounterQ.innerText = value;
   };
 
-  updateFormTextAreaCounter(maxLength);
+  updateFormTextAreaCounterQ(maxLengthQuestion);
 
-  updateFormTextAreaCounter(maxLength - formQuestion.value.length);
+  updateFormTextAreaCounterQ(maxLengthQuestion - formQuestion.value.length);
+
+  // Answer
+  const formAnswer = document.querySelector('[data-js="formAnswer"]');
+  const maxLengthAnswer = formAnswer.getAttribute("maxlength");
+  const formTextAreaCounterA = document.querySelector(
+    "[data-js=formTextareaCounterA]"
+  );
+
+  const updateFormTextAreaCounterA = (value) => {
+    formTextAreaCounterA.innerText = value;
+  };
+
+  updateFormTextAreaCounterA(maxLengthAnswer);
+  updateFormTextAreaCounterA(maxLengthAnswer - formAnswer.value.length);
 });
