@@ -31,6 +31,8 @@ form.addEventListener("submit", (event) => {
   newUlist.classList.add("quiz-card__taglist");
   newListitem.classList.add("quiz-card__taglist__tag");
 
+  // hier noch data-js Attribute verteilen !
+
   newSection.innerHTML = `
     <svg
       data-js="quiz-card__bookmark"
