@@ -5,10 +5,8 @@ form.addEventListener("submit", (event) => {
 
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
-  // const formQuestion = event.target.elements.formQuestion.value;
-  // const formAnswer = event.target.elements.formAnswer.value;
-  // const formTag = event.target.elements.formTag.value;
 
+  // createElement
   const newSection = document.createElement("section");
   const newBookmarkSvg = document.createElement("svg");
   const newQuestion = document.createElement("p");
@@ -17,22 +15,28 @@ form.addEventListener("submit", (event) => {
   const newUlist = document.createElement("ul");
   const newListitem = document.createElement("li");
 
+  // add CSS.class + data-js
   newSection.classList.add("quiz-card");
-  // newBookmarkSvg.classList.add("quiz-card__bookmark");
+  newSection.dataset.js = "quiz-card";
+  // oder:   newSection.setAttribute("data-js", "quiz-card");
+
   newQuestion.classList.add("quiz-card__question");
   newQuestion.dataset.js = "quiz-card__question";
+
   newAnswer.classList.add(
     "quiz-card__answer",
     "quiz-card__answerButton--hidden"
   );
   newAnswer.dataset.js = "quiz-card__answer";
+
   newAnswerButton.classList.add("quiz-card__answerButton");
   newAnswerButton.dataset.js = "quiz-card__answerButton";
+
   newUlist.classList.add("quiz-card__taglist");
   newListitem.classList.add("quiz-card__taglist__tag");
+  // data-js="quiz-card__bookmark" ist schon durch innerHTML
 
-  // hier noch data-js Attribute verteilen !
-
+  // createdElements Content geben
   newSection.innerHTML = `
     <svg
       data-js="quiz-card__bookmark"
@@ -58,6 +62,7 @@ form.addEventListener("submit", (event) => {
   newAnswerButton.textContent = `Show Answer`;
   newListitem.textContent = data.formTag;
 
+  // createdElements an body und weitere anhängen
   document.body.append(newSection);
   newSection.append(newBookmarkSvg);
   newSection.append(newQuestion);

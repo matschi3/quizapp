@@ -23,9 +23,11 @@ const quizCards = document.querySelectorAll('[data-js="quiz-card"]'); //get full
 
 quizCards.forEach((quizCard) => {
   // ANSWER BUTTON
+  const question = quizCard.querySelector('[data-js="quiz-card__question"]'); //get question
+  const answer = quizCard.querySelector('[data-js="quiz-card__answer"]'); //get answer
   const answerButton = quizCard.querySelector(
     '[data-js="quiz-card__answerButton"]'
-  );
+  ); //get answerButton
 
   answerButton.addEventListener("click", () => {
     question.classList.toggle("quiz-card__answerButton--hidden"); //toggle hideMe question
@@ -34,8 +36,6 @@ quizCards.forEach((quizCard) => {
 
   // BOOKMARK
   const bookmark = quizCard.querySelector('[data-js="quiz-card__bookmark"]'); //get bokmark button
-  const question = quizCard.querySelector('[data-js="quiz-card__question"]'); //get question
-  const answer = quizCard.querySelector('[data-js="quiz-card__answer"]'); //get answer
 
   bookmark.addEventListener("click", () => {
     bookmark.classList.toggle("quiz-card__bookmarked"); //toggle bookmark-color
