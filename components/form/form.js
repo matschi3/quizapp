@@ -71,6 +71,10 @@ form.addEventListener("submit", (event) => {
   newSection.append(newUlist);
   newUlist.append(newListitem);
 
+  getCreatedQuizCards();
+});
+
+function getCreatedQuizCards() {
   // new try - all cards on forms page
   const quizCards = document.querySelectorAll('[data-js="quiz-card"]'); //get full quiz-card // container of all
 
@@ -95,4 +99,4 @@ form.addEventListener("submit", (event) => {
       bookmark.classList.toggle("quiz-card__bookmark");
     });
   });
-});
+}
