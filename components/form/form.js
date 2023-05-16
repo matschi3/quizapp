@@ -71,7 +71,9 @@ form.addEventListener("submit", (event) => {
   newSection.append(newUlist);
   newUlist.append(newListitem);
 
-  getCreatedQuizCards();
+  event.target.reset(); // reset inputs
+  form.formQuestion.focus(); // focus after submit zu question input
+  getCreatedQuizCards(); // call buttons function
 });
 
 function getCreatedQuizCards() {
