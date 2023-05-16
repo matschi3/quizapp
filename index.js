@@ -33,9 +33,9 @@ quizCards.forEach((quizCard) => {
   });
 
   // BOOKMARK
-  const bookmark = quizCards.querySelector('[data-js="quiz-card__bookmark"]'); //get bokmark button
-  const question = quizCards.querySelector('[data-js="quiz-card__question"]'); //get question
-  const answer = quizCards.querySelector('[data-js="quiz-card__answer"]'); //get answer
+  const bookmark = quizCard.querySelector('[data-js="quiz-card__bookmark"]'); //get bokmark button
+  const question = quizCard.querySelector('[data-js="quiz-card__question"]'); //get question
+  const answer = quizCard.querySelector('[data-js="quiz-card__answer"]'); //get answer
 
   bookmark.addEventListener("click", () => {
     bookmark.classList.toggle("quiz-card__bookmarked"); //toggle bookmark-color
