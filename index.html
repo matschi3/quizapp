@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QUIZZER - Cool Quiz</title>
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./index.js" defer></script>
+    <script src="./index.js" type="module" defer></script>
   </head>
   <body>
     <header>
@@ -14,6 +14,8 @@
     </header>
     <main>
       <section class="quiz-card_container">
+        <!-- div for placing new created quiz cards in form -->
+        <div data-js="new-quiz-card--here"></div>
         <!-- FRAGE -->
         <section class="quiz-card" data-js="quiz-card">
           <svg

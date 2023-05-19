@@ -62,8 +62,9 @@ form.addEventListener("submit", (event) => {
   newAnswerButton.textContent = `Show Answer`;
   newListitem.textContent = data.formTag;
 
-  // createdElements an body und weitere anhängen
-  document.body.append(newSection);
+  // createdElements in index.html main einfügen
+  const newCardHere = document.querySelector('[data-js="new-quiz-card--here"]');
+
   newSection.append(newBookmarkSvg);
   newSection.append(newQuestion);
   newSection.append(newAnswer);
@@ -71,8 +72,19 @@ form.addEventListener("submit", (event) => {
   newSection.append(newUlist);
   newUlist.append(newListitem);
 
+  newCardHere.appendChild(newSection);
+  /*  // createdElements an body und weitere anhängen
+  document.body.append(newSection);
+  newSection.append(newBookmarkSvg);
+  newSection.append(newQuestion);
+  newSection.append(newAnswer);
+  newSection.append(newAnswerButton);
+  newSection.append(newUlist);
+  newUlist.append(newListitem); */
+
   event.target.reset(); // reset inputs
   form.formQuestion.focus(); // focus after submit zu question input
+
   getCreatedQuizCards(); // call buttons function
 });
 
