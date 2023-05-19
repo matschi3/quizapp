@@ -1,3 +1,5 @@
+import { quizCardData } from "./utils/quiz-card-data.js";
+
 const form = document.querySelector('[data-js="form-newcard"]');
 
 form.addEventListener("submit", (event) => {
@@ -57,22 +59,25 @@ form.addEventListener("submit", (event) => {
       />
     </svg>
   `;
+
+  newAnswerButton.textContent = `Show Answer`;
+
   newQuestion.textContent = data.formQuestion;
   newAnswer.textContent = data.formAnswer;
-  newAnswerButton.textContent = `Show Answer`;
   newListitem.textContent = data.formTag;
 
   // createdElements in index.html main einfügen
   const newCardHere = document.querySelector('[data-js="new-quiz-card--here"]');
 
-  newSection.append(newBookmarkSvg);
-  newSection.append(newQuestion);
-  newSection.append(newAnswer);
-  newSection.append(newAnswerButton);
-  newSection.append(newUlist);
-  newUlist.append(newListitem);
+  newSection.appendChild(newBookmarkSvg);
+  newSection.appendChild(newQuestion);
+  newSection.appendChild(newAnswer);
+  newSection.appendChild(newAnswerButton);
+  newSection.appendChild(newUlist);
+  newUlist.appendChild(newListitem);
 
   newCardHere.appendChild(newSection);
+
   /*  // createdElements an body und weitere anhängen
   document.body.append(newSection);
   newSection.append(newBookmarkSvg);

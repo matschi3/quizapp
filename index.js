@@ -1,4 +1,4 @@
-import { quizCardData } from "./utils/quiz-card-data.js";
+// import { quizCardData } from "./utils/quiz-card-data.js";
 
 const quizCards = document.querySelectorAll('[data-js="quiz-card"]'); //get full quiz-card // container of all
 
