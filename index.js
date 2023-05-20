@@ -68,15 +68,6 @@ questionSets.forEach((questionSet) => {
   newSection.appendChild(newAnswerButton);
   newSection.appendChild(newUlist);
   newUlist.appendChild(newListitem);
-
-  /*  // createdElements an body und weitere anhängen
-  document.body.append(newSection);
-  newSection.append(newBookmarkSvg);
-  newSection.append(newQuestion);
-  newSection.append(newAnswer);
-  newSection.append(newAnswerButton);
-  newSection.append(newUlist);
-  newUlist.append(newListitem); */
 });
 
 // BUTTONS
