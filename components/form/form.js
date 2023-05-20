@@ -1,8 +1,56 @@
-import { quizCardData } from "./utils/quiz-card-data.js";
+import { questionSets } from "../../utils/quiz-card-data.js";
 
 const form = document.querySelector('[data-js="form-newcard"]');
 
 form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData);
+
+  const newQuestionByForm = {
+    question: data.formQuestion,
+    answer: data.formAnswer,
+    tag: [data.formTag],
+    isBookmarked: false,
+  };
+  console.log(newQuestionByForm); //loggs correct
+  questionSets.push(newQuestionByForm);
+
+  event.target.reset(); // reset inputs
+  form.formQuestion.focus(); // focus after submit zu question input
+});
+
+/* function getCreatedQuizCards() {
+  // new try - all cards on forms page
+  const quizCards = document.querySelectorAll('[data-js="quiz-card"]'); //get full quiz-card // container of all
+
+  quizCards.forEach((quizCard) => {
+    // ANSWER BUTTON
+    const question = quizCard.querySelector('[data-js="quiz-card__question"]'); //get question
+    const answer = quizCard.querySelector('[data-js="quiz-card__answer"]'); //get answer
+    const answerButton = quizCard.querySelector(
+      '[data-js="quiz-card__answerButton"]'
+    ); //get answerButton
+
+    answerButton.addEventListener("click", () => {
+      question.classList.toggle("quiz-card__answerButton--hidden"); //toggle hideMe question
+      answer.classList.toggle("quiz-card__answerButton--hidden"); //toggle hideMe answer
+    });
+
+    // BOOKMARK
+    const bookmark = quizCard.querySelector('[data-js="quiz-card__bookmark"]'); //get bokmark button
+
+    bookmark.addEventListener("click", () => {
+      bookmark.classList.toggle("quiz-card__bookmarked"); //toggle bookmark-color
+      bookmark.classList.toggle("quiz-card__bookmark");
+    });
+  });
+} */
+
+// backup:
+
+/* form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const formData = new FormData(event.target);
@@ -67,8 +115,9 @@ form.addEventListener("submit", (event) => {
   newListitem.textContent = data.formTag;
 
   // createdElements in index.html main einfügen
-  const newCardHere = document.querySelector('[data-js="new-quiz-card--here"]');
+  //const newCardHere = document.querySelector('[data-js="new-quiz-card--here"]');
 
+  document.appendChild(newSection);
   newSection.appendChild(newBookmarkSvg);
   newSection.appendChild(newQuestion);
   newSection.appendChild(newAnswer);
@@ -76,46 +125,17 @@ form.addEventListener("submit", (event) => {
   newSection.appendChild(newUlist);
   newUlist.appendChild(newListitem);
 
-  newCardHere.appendChild(newSection);
-
-  /*  // createdElements an body und weitere anhängen
-  document.body.append(newSection);
-  newSection.append(newBookmarkSvg);
-  newSection.append(newQuestion);
-  newSection.append(newAnswer);
-  newSection.append(newAnswerButton);
-  newSection.append(newUlist);
-  newUlist.append(newListitem); */
+    // createdElements an body und weitere anhängen
+  //document.body.append(newSection);
+  //newSection.append(newBookmarkSvg);
+  //newSection.append(newQuestion);
+  //newSection.append(newAnswer);
+  //newSection.append(newAnswerButton);
+  //newSection.append(newUlist);
+  //newUlist.append(newListitem); 
 
   event.target.reset(); // reset inputs
   form.formQuestion.focus(); // focus after submit zu question input
 
-  getCreatedQuizCards(); // call buttons function
-});
-
-function getCreatedQuizCards() {
-  // new try - all cards on forms page
-  const quizCards = document.querySelectorAll('[data-js="quiz-card"]'); //get full quiz-card // container of all
-
-  quizCards.forEach((quizCard) => {
-    // ANSWER BUTTON
-    const question = quizCard.querySelector('[data-js="quiz-card__question"]'); //get question
-    const answer = quizCard.querySelector('[data-js="quiz-card__answer"]'); //get answer
-    const answerButton = quizCard.querySelector(
-      '[data-js="quiz-card__answerButton"]'
-    ); //get answerButton
-
-    answerButton.addEventListener("click", () => {
-      question.classList.toggle("quiz-card__answerButton--hidden"); //toggle hideMe question
-      answer.classList.toggle("quiz-card__answerButton--hidden"); //toggle hideMe answer
-    });
-
-    // BOOKMARK
-    const bookmark = quizCard.querySelector('[data-js="quiz-card__bookmark"]'); //get bokmark button
-
-    bookmark.addEventListener("click", () => {
-      bookmark.classList.toggle("quiz-card__bookmarked"); //toggle bookmark-color
-      bookmark.classList.toggle("quiz-card__bookmark");
-    });
-  });
-}
+  //getCreatedQuizCards(); // call buttons function
+}); */

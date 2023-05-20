@@ -1,5 +1,7 @@
 // import { quizCardData } from "./utils/quiz-card-data.js";
+import { questionSets } from "./utils/quiz-card-data.js";
 
+// BUTTONS
 const quizCards = document.querySelectorAll('[data-js="quiz-card"]'); //get full quiz-card // container of all
 
 quizCards.forEach((quizCard) => {
