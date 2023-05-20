@@ -1,4 +1,4 @@
-import { newQuestionByForm } from "../components/form/form.js";
+//import { newQuestionByForm } from "../components/form/form.js";
 
 const questionSets = [
   {
@@ -14,5 +14,5 @@ const questionSets = [
     isBookmarked: false,
   },
 ];
-
+/* console.log(questionSets[0].question); */
 export { questionSets };
