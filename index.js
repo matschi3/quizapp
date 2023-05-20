@@ -59,8 +59,9 @@ questionSets.forEach((questionSet) => {
   newListitem.textContent = questionSet.tag;
 
   // createdElements in index.html main einfügen
-  //const newCardHere = document.querySelector('[data-js="new-quiz-card--here"]');
-  document.body.appendChild(newSection);
+  const cardContainer = document.querySelector('[data-js="card-container"]');
+  cardContainer.appendChild(newSection);
+  //document.body.appendChild(newSection);
   newSection.appendChild(newBookmarkSvg);
   newSection.appendChild(newQuestion);
   newSection.appendChild(newAnswer);
