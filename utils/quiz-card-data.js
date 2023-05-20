@@ -8,9 +8,9 @@ const questionSets = [
     isBookmarked: false,
   },
   {
-    question: "What property flips the axes in flebox?",
-    answer: "flex-direction",
-    tag: ["html", "flexbox", "css"],
+    question: "What is the Logo of Apple?",
+    answer: "an apple :)",
+    tag: ["apple", "macbook"],
     isBookmarked: false,
   },
 ];
