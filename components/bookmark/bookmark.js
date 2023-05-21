@@ -1,7 +1,9 @@
 import { questionSets } from "./utils/quiz-card-data.js";
 
 questionSets.forEach((questionSet) => {
-  questionSet.forEach((isBookmarked) => {
+  console.log("forEach");
+  //questionSet.forEach((isBookmarked === true) => {
+  if (isBookmarked === true) {
     // createElement
     const newSection = document.createElement("section");
     const newBookmarkSvg = document.createElement("svg");
@@ -60,7 +62,9 @@ questionSets.forEach((questionSet) => {
     newListitem.textContent = questionSet.tag;
 
     // createdElements in index.html main einfügen
-    const cardContainer = document.querySelector('[data-js="card-container"]');
+    const cardContainer = document.querySelector(
+      '[data-js="card-container__isBookmarked"]'
+    );
     cardContainer.appendChild(newSection);
     //document.body.appendChild(newSection);
     newSection.appendChild(newBookmarkSvg);
@@ -69,7 +73,11 @@ questionSets.forEach((questionSet) => {
     newSection.appendChild(newAnswerButton);
     newSection.appendChild(newUlist);
     newUlist.appendChild(newListitem);
-  });
+    console.log("eine Q+A isbookmarked = true!");
+  } else {
+    console.log("eine Q+A  nicht bookmarked.");
+  }
+  //});
 });
 
 // BUTTONS
