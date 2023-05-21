@@ -92,5 +92,6 @@ quizCards.forEach((quizCard) => {
   bookmark.addEventListener("click", () => {
     bookmark.classList.toggle("quiz-card__bookmarked"); //toggle bookmark-color
     bookmark.classList.toggle("quiz-card__bookmark");
+    QuestionSets.isBookmarked = true;
   });
 });
