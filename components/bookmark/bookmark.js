@@ -3,7 +3,7 @@ import { questionSets } from "./utils/quiz-card-data.js";
 questionSets.forEach((questionSet) => {
   console.log("forEach");
   //questionSet.forEach((isBookmarked === true) => {
-  if (isBookmarked === true) {
+  if (questionSet.isBookmarked === true) {
     // createElement
     const newSection = document.createElement("section");
     const newBookmarkSvg = document.createElement("svg");
