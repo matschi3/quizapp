@@ -1,11 +1,12 @@
 //import { newQuestionByForm } from "../components/form/form.js";
+import { questionSets } from "../components/form/form.js";
 
 const questionSets = [
   {
     question: "What property flips the axes in flexbox?",
     answer: "flex-direction",
     tag: ["html", "flexbox", "css"],
-    isBookmarked: false,
+    isBookmarked: true,
   },
   {
     question: "What is the Logo of Apple?",
