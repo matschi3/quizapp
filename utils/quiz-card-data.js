@@ -1,4 +1,6 @@
 //import { questionSetsAndNewQuestionByForm } from "../components/form/form.js";
+//import { questionSetsAndNew } from "../utils/pushNewQuestionByFormIntoQuestionSets.js";
+import { questionSetsAndNew } from "../components/form/form.js";
 
 const questionSets = [
   {

@@ -23,10 +23,15 @@ form.addEventListener("submit", (event) => {
   console.log(typeof newQuestionByForm.isBookmarked);
   console.log("--- --- ---");
   console.log(Array.isArray(questionSets)); */
+
   pushNewQuestionByFormIntoQuestionSets(newQuestionByForm);
+  console.log(questionSets);
 
   event.target.reset(); // reset inputs
   form.formQuestion.focus(); // focus after submit zu question input
+  //return questionSets;
 });
 
 //export { questionSetsAndNewQuestionByForm };
+//export { newQuestionByForm };
+//export { questionSets };
