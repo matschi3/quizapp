@@ -15,7 +15,10 @@ form.addEventListener("submit", (event) => {
     tag: ["created", data.formTag],
     isBookmarked: false,
   };
+  console.log("newQuestionByForm:");
   console.log(newQuestionByForm); //loggs correct
+  console.log("---/---/---");
+
   /*   console.log(typeof newQuestionByForm);
   console.log(typeof newQuestionByForm.question);
   console.log(typeof newQuestionByForm.answer);
@@ -24,8 +27,8 @@ form.addEventListener("submit", (event) => {
   console.log("--- --- ---");
   console.log(Array.isArray(questionSets)); */
 
-  pushNewQuestionByFormIntoQuestionSets(newQuestionByForm);
-  console.log(questionSets);
+  //pushNewQuestionByFormIntoQuestionSets(newQuestionByForm);
+  //console.log(questionSets);
 
   event.target.reset(); // reset inputs
   form.formQuestion.focus(); // focus after submit zu question input
