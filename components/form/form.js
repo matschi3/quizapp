@@ -19,14 +19,6 @@ form.addEventListener("submit", (event) => {
   console.log("newQuestionByForm:");
   console.log(newQuestionByForm); //loggs correct
 
-  /*   console.log(typeof newQuestionByForm);
-  console.log(typeof newQuestionByForm.question);
-  console.log(typeof newQuestionByForm.answer);
-  console.log(typeof newQuestionByForm.tag);
-  console.log(typeof newQuestionByForm.isBookmarked);
-  console.log("--- --- ---");
-  console.log(Array.isArray(questionSets)); */
-
   /* questionSets =  */ pushNewQuestionByFormIntoQuestionSets(
     newQuestionByForm
   );
@@ -38,6 +30,5 @@ form.addEventListener("submit", (event) => {
   return questionSets;
 });
 
-//export { questionSetsAndNewQuestionByForm };
 //export { newQuestionByForm };
 export { pushNewQuestionByFormIntoQuestionSets };
