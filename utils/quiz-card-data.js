@@ -1,8 +1,8 @@
 //import { questionSetsAndNewQuestionByForm } from "../components/form/form.js";
 //import { questionSetsAndNew } from "../utils/pushNewQuestionByFormIntoQuestionSets.js";
-//import { questionSets } from "../components/form/form.js";
+//import { pushNewQuestionByFormIntoQuestionSets } from "../components/form/form.js";
 
-const questionSets = [
+let questionSets = [
   {
     question: "What property flips the axes in flexbox?",
     answer: "flex-direction",
@@ -16,5 +16,7 @@ const questionSets = [
     isBookmarked: false,
   },
 ];
-/* console.log(questionSets[0].question); */
+
+//const questionSetsAndNew = [];
+
 export { questionSets };
