@@ -1,17 +1,25 @@
-import { questionSets } from "../../utils/quiz-card-data.js";
-//import { newQuestionByForm } from "../components/form/form.js";
+/* import { questionSets } from "../../utils/quiz-card-data.js";
 
-function pushNewQuestionByFormIntoQuestionSets(newFormDataSet) {
-  /*   console.log("inside pushNewQuest:");
-  console.log(questionSets);
-  console.log("---/---/---"); */
+function pushNewQuestionByFormIntoQuestionSets(event) {
+  event.preventDefault();
 
-  /*   const questionSetsPlus =  */ questionSets.push(newFormDataSet);
-  //  questionSets = questionSetsPlus;
-  /*   console.log("inside/after pushNewQuest:");
-  console.log(questionSets);
-  console.log("---/---/---"); */
-  return questionSets;
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData);
+
+  let newQuestionByForm = {
+    question: data.formQuestion,
+    answer: data.formAnswer,
+    tag: ["created", data.formTag],
+    isBookmarked: false,
+  };
+  console.log("newQuestionByForm:");
+  console.log(newQuestionByForm); //loggs correct
+
+  questionSets.push(newQuestionByForm);
+
+  event.target.reset(); // reset inputs
+  const form = document.querySelector('[data-js="form-newcard"]');
+  form.formQuestion.focus(); // focus after submit zu question input
 }
 
-export { pushNewQuestionByFormIntoQuestionSets };
+export { pushNewQuestionByFormIntoQuestionSets }; */
