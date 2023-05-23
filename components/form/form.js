@@ -1,4 +1,4 @@
-import { pushNewQuestionByFormIntoQuestionSets } from "../../utils/quiz-card-data.js";
+import { pushNewQuestionByFormIntoQuestionSets } from "../../utils/pushNewQuestionByFormIntoQuestionSets.js";
 
 const form = document.querySelector('[data-js="form-newcard"]');
 
