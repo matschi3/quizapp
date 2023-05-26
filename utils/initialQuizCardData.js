@@ -1,4 +1,4 @@
-export const InitialQuestionSets = [
+export const initialQuestionSets = [
   {
     id: 1,
     question: "What property flips the axes in flexbox?",

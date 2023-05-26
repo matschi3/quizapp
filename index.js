@@ -1,4 +1,4 @@
-import { InitialQuestionSets } from "./utils/initialQuizCardData.js";
+import { initialQuestionSets } from "./utils/initialQuizCardData.js";
 import { renderQuizCards } from "./utils/renderQuizCards.js";
 
 // state
@@ -8,7 +8,7 @@ const questionSetsJSON = localStorage.getItem("questionSets");
 if (questionSetsJSON) {
   questionSets = JSON.parse(questionSetsJSON);
 } else {
-  questionSets = InitialQuestionSets.map((quizCardObject) => quizCardObject);
+  questionSets = initialQuestionSets.map((questionSet) => questionSet);
 }
 
 renderQuizCards();

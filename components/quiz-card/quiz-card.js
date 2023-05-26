@@ -1,10 +1,10 @@
-export function createQuizCard(questionSets) {
+function createQuizCard(questionSet, onToggleBookmark, onToggleAnswer) {
   // section
   const newSection = document.createElement("section");
   newSection.classList.add("quiz-card");
   newSection.dataset.js = "quiz-card"; // or: newSection.setAttribute("data-js", "quiz-card");
-  const cardContainer = document.querySelector('[data-js="card-container"]'); // document.body.appendChild(newSection);
-  cardContainer.appendChild(newSection);
+  //const cardContainer = document.querySelector('[data-js="card-container"]'); // document.body.appendChild(newSection);
+  //cardContainer.appendChild(newSection);
 
   // span bookmark
   const newSpan = document.createElement("span");
@@ -38,7 +38,7 @@ export function createQuizCard(questionSets) {
   const newQuestion = document.createElement("p");
   newQuestion.classList.add("quiz-card__question");
   newQuestion.dataset.js = "quiz-card__question";
-  newQuestion.textContent = questionSets.question;
+  newQuestion.textContent = questionSet.question;
   newSection.appendChild(newQuestion);
 
   // answer
@@ -48,7 +48,7 @@ export function createQuizCard(questionSets) {
     "quiz-card__answerButton--hidden"
   );
   newAnswer.dataset.js = "quiz-card__answer";
-  newAnswer.textContent = questionSets.answer;
+  newAnswer.textContent = questionSet.answer;
   newSection.appendChild(newAnswer);
 
   // answer button
@@ -65,10 +65,13 @@ export function createQuizCard(questionSets) {
   newSection.appendChild(newUlist); // maybe here maybe below tags
 
   // tags
-  questionSets.tag.forEach((tg) => {
+  questionSet.tag.forEach((tg) => {
     const newListitem = document.createElement("li");
     newListitem.classList.add("quiz-card__taglist__tag");
     newListitem.textContent = tg;
     newUlist.appendChild(newListitem);
   });
+  return newSection;
 }
+
+export { createQuizCard };
